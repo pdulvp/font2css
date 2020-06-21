@@ -25,7 +25,8 @@ if (typeof require !== "undefined" && typeof exports === 'object' && typeof modu
 		},
 		
 		toCss: function(fontName, prefix) {
-			return tocss.execute("getunicode.py", fontName).then(e => {
+			let packagePath = require("path").dirname(require.resolve("./package.json"));
+			return tocss.execute(packagePath+"/getunicode.py", fontName).then(e => {
 				let result = e.map(x => {
 					return `${prefix}${x.n}:before { content: "\\${x.c.toString(16).toUpperCase()}" }`;
 				}).join("\n");
