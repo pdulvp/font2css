@@ -10,6 +10,6 @@
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
     "@pdulvp/fsquery": "^1.0.2",
-    "@pdulvp/httpquery": "^1.0.3"
+    "@pdulvp/httpquery": "^2.0.0"
   }
 }
